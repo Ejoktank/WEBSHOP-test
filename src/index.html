@@ -1,51 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fruits & Berries</title>
-  <!-- <link href="../img/svg-sprite.html" rel="import"/> -->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat:ital,wght@0,300;1,400&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
+  <header class="header">
     <div class="burger-container">
       <span class="burger">МЕНЮ</span>
       <div class="burger-line burger-line-1"></div>
       <div class="burger-line burger-line-2"></div>
-      <div class="burger-line burger-line-3"></div> 
+      <div class="burger-line burger-line-3"></div>
     </div>
     <div class="header-subcontainer">
       <div class="phone-container">
         <div class="phone-subcontainer">
-          <a class="phone">+7 (831) 291-07-07</a>
+          <a href="+7 (831) 291-07-07" class="phone">+7 (831) 291-07-07</a>
           <span class="description">горячая линия</span>
         </div>
         <div class="phone-subcontainer">
-          <a class="phone">+7 (831) 291-31-31</a>
+          <a href="+7 (831) 291-31-31" class="phone">+7 (831) 291-31-31</a>
           <span class="description">интернет-магазин</span>
         </div>
       </div>
       <a href="#" class="logo">
-        <img class="logo-img" src="../img/logo.png" alt="логотип Fruits & Berries"> 
+        <img class="logo-img" src="../img/logo.png" alt="логотип Fruits & Berries">
       </a>
-      <button class="search">
+      <button class="button search-button">
         <svg class="search-icon">
           <use xlink:href="#search"></use>
         </svg>
       </button>
-      <div class="shopping-cart-container">
-        <button class="shopping-cart">
-          <svg class="cart-icon">
-            <use xlink:href="#shopping-cart"></use>
-          </svg>
-        </button>
-        <span class="goods">15</span>
-      </div>
+    </div>
+    <div class="shopping-cart-container">
+      <button class="button shopping-cart-button">
+        <svg class="cart-icon">
+          <use xlink:href="#shopping-cart"></use>
+        </svg>
+      </button>
+      <span class="goods">15</span>
     </div>
   </header>
   <main>
-
+    <div class="container">
+      <div class="subcontaier-left">
+        <div class="subcontainer-upper">
+          <div class="card card-fruits">
+            <h2 class="title">ФРУКТЫ</h2>
+            <p class="card-descr">Скидка 20% на турецкие фрукты</p>
+            <button class="watch-more purple">Смотреть</button>
+          </div>
+        </div>
+        <div class="subcontainer-lower">
+          <div class="card card-berries">
+            <h2 class="title">ЯГОДЫ</h2>
+            <p class="card-descr">Сезонные новинки</p>
+            <button class="watch-more red">Смотреть</button>
+          </div>
+          <div class="card card-juice">
+            <h2 class="title">СОКИ</h2>
+            <p class="card-descr">Новые вкусы</p>
+            <button class="watch-more green">Смотреть</button>
+          </div>
+        </div>
+      </div>
+      <div class="subcontaier-right">
+        <div class="card vegs-card">
+          <h2 class="title">ОВОЩИ</h2>
+          <p class="card-descr">Горшочек свежей зелени в подарок при любой покупке</p>
+          <button class="watch-more orange">Смотреть</button>
+        </div>
+      </div>
+    </div>
   </main>
   <svg xmlns="http://www.w3.org/2000/svg">
     <symbol id="search" width="25" height="25" viewBox="0 0 25 25">
@@ -60,4 +95,5 @@
     </symbol>
   </svg>
 </body>
+
 </html>

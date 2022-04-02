@@ -1,0 +1,207 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #292B2A;
+}
+
+h2,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  padding: 0 30px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 115px;
+}
+
+svg {
+  width: 40px;
+  height: 40px;
+}
+
+.header-subcontainer {
+  width: 1520px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger-container {
+}
+
+.burger {
+  font-size: 11px;
+}
+
+.burger-line.burger-line-1 {
+}
+
+.burger-line.burger-line-2 {
+}
+
+.burger-line.burger-line-3 {
+}
+
+.phone-container {
+}
+
+.phone {
+  font-weight: 700;
+  font-size: 16px;
+
+  text-decoration: none;
+  color: #292B2A;
+}
+
+.description {
+  margin-left: 12px;
+  font-size: 14px;
+  color: #959595;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.search-button {
+}
+
+#search {
+}
+
+#shopping-cart {
+}
+
+.shopping-cart-container {
+}
+
+.subcontaier-left {
+}
+
+.subcontaier-right {
+}
+
+.phone-subcontainer {
+}
+
+.logo {
+}
+
+.logo-img {
+}
+
+.search-icon > use {
+  transform: translate(5px, 5px);
+}
+
+.cart-icon > use {
+  transform: translate(5px, 5px);
+}
+
+.shopping-cart-button {
+}
+
+.goods {
+}
+
+.subcontainer-upper {
+}
+
+.subcontainer-lower {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 280px;
+  height: 186px;
+
+  padding: 40px;
+
+  box-shadow: 1px 1px 10px #e5e5e5;
+  border-radius: 8px;
+
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.card-fruits {
+  width: 670px;
+
+  background-image: url(../img/fruits.png);
+}
+
+.vegs-card {
+  height: 482px;
+
+  background-image: url(../img/vegs.jpg);
+}
+
+.card-berries {
+  background-image: url(../img/berries.jpg);
+}
+
+.card-juice {
+  background-image: url(../img/juice.jpg);
+}
+
+.title {
+  font-family: "Amatic SC", cursive;
+  font-size: 40px;
+}
+
+.card-descr {
+}
+
+.watch-more {
+  margin-top: 60px;
+  background-color: transparent;
+  border: none;
+}
+
+.watch-more:hover {
+  cursor: pointer;
+}
+
+.purple {
+  color: #CEAFC8;
+}
+
+.red {
+  color: #FC8663;
+}
+
+.green {
+  color: #88BCB9;
+}
+
+.orange {
+  color: #FFD452;
+}
