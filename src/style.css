@@ -1,7 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-family: "Roboto", sans-serif;
-  color: #292B2A;
+  color: #292b2a;
 }
 
 h2,
@@ -25,7 +25,7 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 115px;
 }
@@ -35,8 +35,15 @@ svg {
   height: 40px;
 }
 
+.line {
+  height: 28px;
+  border-left: 1px solid #D7D7D7;
+}
+
 .header-subcontainer {
   width: 1520px;
+  margin-left: 50px;
+  margin-right: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -45,6 +52,7 @@ svg {
 }
 
 .burger-container {
+  margin-right: 50px;
 }
 
 .burger {
@@ -68,7 +76,7 @@ svg {
   font-size: 16px;
 
   text-decoration: none;
-  color: #292B2A;
+  color: #292b2a;
 }
 
 .description {
@@ -98,9 +106,6 @@ svg {
 #shopping-cart {
 }
 
-.shopping-cart-container {
-}
-
 .subcontaier-left {
 }
 
@@ -120,14 +125,37 @@ svg {
   transform: translate(5px, 5px);
 }
 
+.search-button:hover ~ #search>path {
+  fill: #CEAFC8;
+}
+
 .cart-icon > use {
-  transform: translate(5px, 5px);
+  transform: translate(0, 5px);
+}
+
+.shopping-cart-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 50px;
 }
 
 .shopping-cart-button {
 }
 
 .goods {
+  width: 22px;
+  height: 15px;
+  margin-left: 9px;
+
+  background: #ceafc8;
+  border-radius: 4px;
+
+  text-align: center;
+  font-weight: 900;
+  font-size: 10px;
+  color: #FFFFFF;
+  line-height: 15px;
 }
 
 .subcontainer-upper {
@@ -191,17 +219,17 @@ svg {
 }
 
 .purple {
-  color: #CEAFC8;
+  color: #ceafc8;
 }
 
 .red {
-  color: #FC8663;
+  color: #fc8663;
 }
 
 .green {
-  color: #88BCB9;
+  color: #88bcb9;
 }
 
 .orange {
-  color: #FFD452;
+  color: #ffd452;
 }
