@@ -100,12 +100,6 @@ svg {
 .search-button {
 }
 
-#search {
-}
-
-#shopping-cart {
-}
-
 .subcontaier-left {
 }
 
@@ -121,16 +115,20 @@ svg {
 .logo-img {
 }
 
-.search-icon > use {
+.search-icon {
   transform: translate(5px, 5px);
 }
 
-.search-button:hover ~ #search>path {
+.search-button:hover path{
   fill: #CEAFC8;
 }
 
-.cart-icon > use {
+.cart-icon {
   transform: translate(0, 5px);
+}
+
+.shopping-cart-button:hover path{
+  fill: #CEAFC8;
 }
 
 .shopping-cart-container {
@@ -178,6 +176,39 @@ svg {
 
   background-repeat: no-repeat;
   background-position: bottom right;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+
+}
+
+.card::before {
+  display: none;
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 600px;
+  left: 0;
+
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #CEAFC8;
+  transform: translate(-80px, -200px);
+  animation: fill 1.2s cubic-bezier(.5,.67,.7,1);
+  z-index: -1;
+}
+
+@keyframes fill {
+  from {
+    left: -250px;
+    transform: translate(-200px, -200px) rotate(0deg);
+  }
+  to {
+    left: 0;
+    transform: translate(-80px, -200px) rotate(-180deg);
+  }
 }
 
 .card-fruits {
@@ -186,18 +217,64 @@ svg {
   background-image: url(../img/fruits.png);
 }
 
-.vegs-card {
+.card-vegs {
   height: 482px;
 
   background-image: url(../img/vegs.jpg);
+}
+
+.card-vegs::before {
+  width: 600px;
+  height: 450px;
+  background-color: #FFD452;
+  transform: translate(-120px, -200px) rotate(-180deg);
+  animation: fill-vegs 1.2s cubic-bezier(.5,.67,.7,1);
+}
+
+@keyframes fill-vegs {
+  from {
+    top: -100px;
+    border-radius: 40%;
+    transform: translate(-120px, -500px) rotate(0deg);
+  }
+  to {
+    top: 40px;
+    border-radius: 50%;
+    transform: translate(-120px, -200px) rotate(-180deg);
+  }
 }
 
 .card-berries {
   background-image: url(../img/berries.jpg);
 }
 
+.card-berries::before,
+.card-juice::before {
+  width: 350px;
+  height: 400px;
+  background-color: #FC8663;
+  transform: translate(-150px, -100px);
+  animation: fill-berries 1.2s ease-in-out;
+}
+
+@keyframes fill-berries {
+  from {
+    left: -250px;
+    border-radius: 40%;
+    transform: translate(-100px, 0px) rotate(0deg);
+  }
+  to {
+    left: 0;
+    transform: translate(-150px, -100px) rotate(-180deg);
+  }
+}
+
 .card-juice {
   background-image: url(../img/juice.jpg);
+}
+
+.card-juice::before {
+  background-color: #88BCB9;
 }
 
 .title {
@@ -216,6 +293,10 @@ svg {
 
 .watch-more:hover {
   cursor: pointer;
+}
+
+.card:hover::before {
+  display: block;
 }
 
 .purple {
