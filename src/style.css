@@ -14,6 +14,10 @@ button {
   border: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .container {
   width: 1140px;
   margin-right: auto;
@@ -36,8 +40,8 @@ button {
 }
 
 svg {
-  width: 40px;
-  height: 40px;
+  width: 28px;
+  height: 28px;
 }
 
 .line {
@@ -76,7 +80,15 @@ svg {
   cursor: pointer;
 }
 
+.burger-container:focus {
+  color: #CEAFC8;
+}
+
 .burger-container:hover .burger-line{
+  border-bottom: 2px solid #CEAFC8 ;
+}
+
+.burger-container:focus .burger-line{
   border-bottom: 2px solid #CEAFC8 ;
 }
 
@@ -110,10 +122,6 @@ svg {
   height: 40px;
 }
 
-.button:hover {
-  cursor: pointer;
-}
-
 .search-icon {
   transform: translate(5px, 5px);
 }
@@ -126,12 +134,21 @@ path {
   fill: #ceafc8;
 }
 
+.search-button:focus path {
+  fill: #ceafc8;
+}
+
 .cart-icon {
   transform: translate(0, 5px);
 }
 
 .shopping-cart-button:hover path {
   fill: #ceafc8;
+}
+
+.shopping-cart-button:focus path {
+  fill: #ceafc8;
+  outline: none;
 }
 
 .shopping-cart-container {
