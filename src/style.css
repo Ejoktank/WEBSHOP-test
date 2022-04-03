@@ -37,7 +37,7 @@ svg {
 
 .line {
   height: 28px;
-  border-left: 1px solid #D7D7D7;
+  border-left: 1px solid #d7d7d7;
 }
 
 .header-subcontainer {
@@ -68,9 +68,6 @@ svg {
 .burger-line.burger-line-3 {
 }
 
-.phone-container {
-}
-
 .phone {
   font-weight: 700;
   font-size: 16px;
@@ -97,38 +94,20 @@ svg {
   cursor: pointer;
 }
 
-.search-button {
-}
-
-.subcontaier-left {
-}
-
-.subcontaier-right {
-}
-
-.phone-subcontainer {
-}
-
-.logo {
-}
-
-.logo-img {
-}
-
 .search-icon {
   transform: translate(5px, 5px);
 }
 
-.search-button:hover path{
-  fill: #CEAFC8;
+.search-button:hover path {
+  fill: #ceafc8;
 }
 
 .cart-icon {
   transform: translate(0, 5px);
 }
 
-.shopping-cart-button:hover path{
-  fill: #CEAFC8;
+.shopping-cart-button:hover path {
+  fill: #ceafc8;
 }
 
 .shopping-cart-container {
@@ -152,11 +131,8 @@ svg {
   text-align: center;
   font-weight: 900;
   font-size: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 15px;
-}
-
-.subcontainer-upper {
 }
 
 .subcontainer-lower {
@@ -174,14 +150,8 @@ svg {
   box-shadow: 1px 1px 10px #e5e5e5;
   border-radius: 8px;
 
-  background-repeat: no-repeat;
-  background-position: bottom right;
   position: relative;
   overflow: hidden;
-}
-
-.card:hover {
-
 }
 
 .card::before {
@@ -194,95 +164,71 @@ svg {
 
   overflow: hidden;
   border-radius: 50%;
-  background-color: #CEAFC8;
+  background-color: #ceafc8;
   transform: translate(-80px, -200px);
-  animation: fill 1.2s cubic-bezier(.5,.67,.7,1);
+  animation: fill 1.2s cubic-bezier(0.5, 0.67, 0.7, 1);
   z-index: -1;
-}
-
-@keyframes fill {
-  from {
-    left: -250px;
-    transform: translate(-200px, -200px) rotate(0deg);
-  }
-  to {
-    left: 0;
-    transform: translate(-80px, -200px) rotate(-180deg);
-  }
 }
 
 .card-fruits {
   width: 670px;
+}
 
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  z-index: -2;
+}
+
+.bg-fruit {
   background-image: url(../img/fruits.png);
+}
+
+.bg-berries {
+  background-image: url(../img/berries.jpg);
+}
+
+.bg-juice {
+  background-image: url(../img/juice.jpg);
+}
+
+.bg-vegs {
+  background-image: url(../img/vegs.jpg);
 }
 
 .card-vegs {
   height: 482px;
-
-  background-image: url(../img/vegs.jpg);
 }
 
 .card-vegs::before {
   width: 600px;
   height: 450px;
-  background-color: #FFD452;
+  background-color: #ffd452;
   transform: translate(-120px, -200px) rotate(-180deg);
-  animation: fill-vegs 1.2s cubic-bezier(.5,.67,.7,1);
-}
-
-@keyframes fill-vegs {
-  from {
-    top: -100px;
-    border-radius: 40%;
-    transform: translate(-120px, -500px) rotate(0deg);
-  }
-  to {
-    top: 40px;
-    border-radius: 50%;
-    transform: translate(-120px, -200px) rotate(-180deg);
-  }
-}
-
-.card-berries {
-  background-image: url(../img/berries.jpg);
+  animation: fill-vegs .8s cubic-bezier(0.5, 0.67, 0.7, 1);
 }
 
 .card-berries::before,
 .card-juice::before {
   width: 350px;
   height: 400px;
-  background-color: #FC8663;
+  background-color: #fc8663;
   transform: translate(-150px, -100px);
-  animation: fill-berries 1.2s ease-in-out;
-}
-
-@keyframes fill-berries {
-  from {
-    left: -250px;
-    border-radius: 40%;
-    transform: translate(-100px, 0px) rotate(0deg);
-  }
-  to {
-    left: 0;
-    transform: translate(-150px, -100px) rotate(-180deg);
-  }
-}
-
-.card-juice {
-  background-image: url(../img/juice.jpg);
+  animation: fill-berries .8s ease-in-out;
 }
 
 .card-juice::before {
-  background-color: #88BCB9;
+  background-color: #88bcb9;
 }
 
 .title {
   font-family: "Amatic SC", cursive;
   font-size: 40px;
-}
-
-.card-descr {
 }
 
 .watch-more {
@@ -291,8 +237,34 @@ svg {
   border: none;
 }
 
-.watch-more:hover {
+.watch-more-white {
+  margin-top: 60px;
+  background-color: transparent;
+  border: none;
+  display: none;
+  transform: translate(-25px, 0);
+  transition-duration: 1s;
+  opacity: 0;
+}
+
+.watch-more:hover,
+.watch-more-white:hover {
   cursor: pointer;
+}
+
+.card:hover .watch-more {
+  transform: translateX(50px);
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: .3s;
+}
+
+.card:hover .watch-more-white {
+  display: block;
+  transition-duration: 1s;
+  visibility: visible;
+  opacity: 1;
+  transform: translate(5px, -105px);
 }
 
 .card:hover::before {
@@ -313,4 +285,40 @@ svg {
 
 .orange {
   color: #ffd452;
+}
+
+@keyframes fill {
+  from {
+    left: -250px;
+    transform: translate(-200px, -200px) rotate(0deg);
+  }
+  to {
+    left: 0;
+    transform: translate(-80px, -200px) rotate(-180deg);
+  }
+}
+
+@keyframes fill-vegs {
+  from {
+    top: -100px;
+    border-radius: 40%;
+    transform: translate(-120px, -500px) rotate(0deg);
+  }
+  to {
+    top: 40px;
+    border-radius: 50%;
+    transform: translate(-120px, -200px) rotate(-180deg);
+  }
+}
+
+@keyframes fill-berries {
+  from {
+    left: -250px;
+    border-radius: 40%;
+    transform: translate(-100px, 0px) rotate(0deg);
+  }
+  to {
+    left: 0;
+    transform: translate(-150px, -100px) rotate(-180deg);
+  }
 }
