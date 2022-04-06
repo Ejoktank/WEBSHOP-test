@@ -190,10 +190,11 @@ path {
 
   position: relative;
   overflow: hidden;
+  --display: none;
 }
 
 .card::before {
-  display: none;
+  display: var(--display);
   content: "";
   position: absolute;
   width: 450px;
@@ -202,10 +203,13 @@ path {
 
   overflow: hidden;
   border-radius: 50%;
+  z-index: -1;
+}
+
+.card-fruits::before {
   background-color: #ceafc8;
   transform: translate(-80px, -200px);
   animation: fill 1.2s cubic-bezier(0.5, 0.67, 0.7, 1);
-  z-index: -1;
 }
 
 .card-fruits {
@@ -274,35 +278,19 @@ path {
 }
 
 .watch-more-white {
-  margin-top: 60px;
-  display: none;
-  transform: translate(-25px, 0);
-  transition-duration: 1s;
-  opacity: 0;
+  width: 100px;
+  height: 60px;
+  margin-top: 40px;
+  background-image: url(../img/watch-btn.png);
+
 }
 
-.watch-more:hover,
-.watch-more-white:hover {
+.watch-more:hover {
   cursor: pointer;
 }
 
-.card:hover .watch-more {
-  transform: translateX(50px);
-  visibility: hidden;
-  opacity: 0;
-  transition-duration: .3s;
-}
-
-.card:hover .watch-more-white {
-  display: block;
-  transition-duration: 1s;
-  visibility: visible;
-  opacity: 1;
-  transform: translate(5px, -105px);
-}
-
-.card:hover::before {
-  display: block;
+.watch-more:focus {
+  outline: none;
 }
 
 .purple {
