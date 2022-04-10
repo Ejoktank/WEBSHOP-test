@@ -191,6 +191,7 @@ path {
   position: relative;
   overflow: hidden;
   --display: none;
+  --animation: fill 1.2s cubic-bezier(0.5, 0.67, 0.7, 1);
 }
 
 .card::before {
@@ -209,7 +210,7 @@ path {
 .card-fruits::before {
   background-color: #ceafc8;
   transform: translate(-80px, -200px);
-  animation: fill 1.2s cubic-bezier(0.5, 0.67, 0.7, 1);
+  animation: var(--animation);
 }
 
 .card-fruits {
@@ -317,6 +318,17 @@ path {
   to {
     left: 0;
     transform: translate(-80px, -200px) rotate(-180deg);
+  }
+}
+
+@keyframes fill_out {
+  from {
+    left: 0;
+    transform: translate(-80px, -200px) rotate(-180deg);
+  }
+  to {
+    left: -250px;
+    transform: translate(-200px, -200px) rotate(0deg);
   }
 }
 

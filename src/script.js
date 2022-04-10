@@ -11,12 +11,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let cards = document.getElementsByClassName('card');
   for (let card of cards) {
+    let btn = card.querySelector('.watch-more');
     card.addEventListener('mouseenter', () => {
-      let btn = card.querySelector('.watch-more'); 
       beforeFocusCall(btn);
     });
     card.addEventListener('mouseleave', () => {
-      let btn = card.querySelector('.watch-more');
       beforeFocusOut(btn);
     });
   };
@@ -26,6 +25,7 @@ function beforeFocusCall(btn) {
   btn.textContent = '';
   btn.classList.add('watch-more-white');
   if (btn.classList.contains('purple')) {
+    document.querySelector('.card-fruits').style.setProperty('--animation', 'fill 1.3s cubic-bezier(0.5, 0.67, 0.7, 1)');
     document.querySelector('.card-fruits').style.setProperty('--display', 'block');
   };
   if (btn.classList.contains('red')) {
@@ -43,7 +43,11 @@ function beforeFocusOut(btn) {
   btn.textContent = 'Смотреть';
   btn.classList.remove('watch-more-white');
   if (btn.classList.contains('purple')) {
-    document.querySelector('.card-fruits').style.setProperty('--display', 'none');
+    document.querySelector('.card-fruits').style.setProperty('--animation', 'fill_out 1.2s cubic-bezier(0.5, 0.67, 0.7, 1)');
+    console.log(document.querySelector('.card-fruits').style)
+    setTimeout(() => {
+      document.querySelector('.card-fruits').style.setProperty('--display', 'none');
+    }, 1200)
   };
   if (btn.classList.contains('red')) {
     document.querySelector('.card-berries').style.setProperty('--display', 'none');
